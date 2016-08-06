@@ -6,17 +6,17 @@ import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 
 public class Preserver {
-    private static final int LOADER_ID = 23;
 
     public static <I> void init(
             final AppCompatActivity activity,
+            final int loaderId,
             final PreservedInstanceFactory<I> factory,
             final OnInstanceReloadedAction<I> onInstanceReloaded,
             final OnInstanceDestroyedAction onInstanceDestroyed) {
 
         activity.getSupportLoaderManager()
                 .initLoader(
-                        LOADER_ID,
+                        loaderId,
                         Bundle.EMPTY,
                         new LoaderManager.LoaderCallbacks<I>() {
             @Override
@@ -36,11 +36,11 @@ public class Preserver {
         });
     }
 
-    interface OnInstanceDestroyedAction {
+    public interface OnInstanceDestroyedAction {
         void performAction();
     }
 
-    interface OnInstanceReloadedAction<I> {
+    public interface OnInstanceReloadedAction<I> {
         void performAction(I instance);
     }
 
