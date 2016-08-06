@@ -5,14 +5,14 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 
-public class Preserver<I> {
+public class Preserver {
     private static final int LOADER_ID = 23;
 
     public static <I> void init(
             final AppCompatActivity activity,
             final PreservedInstanceFactory<I> factory,
-            final Callback onInstanceReloaded,
-            final Callback onInstanceDestroyed) {
+            final OnInstanceReloadedAction<I> onInstanceReloaded,
+            final OnInstanceDestroyedAction onInstanceDestroyed) {
 
         activity.getSupportLoaderManager()
                 .initLoader(
@@ -25,8 +25,8 @@ public class Preserver<I> {
             }
 
             @Override
-            public void onLoadFinished(Loader<I> loader, I i) {
-                onInstanceReloaded.performAction();
+            public void onLoadFinished(Loader<I> loader, I instance) {
+                onInstanceReloaded.performAction(instance);
             }
 
             @Override
@@ -36,8 +36,12 @@ public class Preserver<I> {
         });
     }
 
-    interface Callback {
+    interface OnInstanceDestroyedAction {
         void performAction();
+    }
+
+    interface OnInstanceReloadedAction<I> {
+        void performAction(I instance);
     }
 
 }
