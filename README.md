@@ -2,15 +2,17 @@
 _Android library allowing to preserve instance of any object accross orientation changes._
 
 ### Specs
-* Lightweight < 10kB
+* Lightweight < 20kB
 * Clear & Flexible API (Using composition instead of inheritance)
 * Java 8 ready
 
 ### Usage
 
 ### Sample scenario
+The purpose of Bonnie lib was to provide simple and robust cache for presenters in MVP architecture. In MVP approach often there is a need to preserve presenter from being destroyed during orientation change of activty. 
 
 ### The magic
+Bonnie uses Android Loader API under the hood. Loaders are providing an API to handle asynchronous data loading in activity or fragment. The Bonnie lib uses them to provide simple way of caching (preserving) instances of objects that mustn't be destroyed during orientation changes. Instances being preserved are destroyed when the activity holding them is no longer abandoned. 
 
 ### Motto
 _Last night as I lay on my pillow_<br>
