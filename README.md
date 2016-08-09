@@ -3,7 +3,7 @@ _Android library allowing to preserve instance of any object accross orientation
 
 ### Specs
 * Lightweight < 20kB
-* Clear & Flexible API (Using composition instead of inheritance)
+* Clear & Flexible API (Using composition instead of forcing inheritance)
 * Java 8 ready
 
 ### Usage
