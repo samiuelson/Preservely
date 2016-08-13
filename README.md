@@ -30,7 +30,7 @@ Bonnie uses Android Loader API under the hood. Loaders framework is providing AP
     See the License for the specific language governing permissions and
     limitations under the License.
 
-### Motto
+### Etymology
   _Last night as I lay on my pillow_<br>
   _Last night as I lay on my bed_<br>
   _Last night as I lay on my pillow_<br>
