@@ -14,6 +14,7 @@ The purpose of Bonnie lib was to provide simple and robust cache for presenters 
 ### The magic
 Bonnie uses Android Loader API under the hood. Loaders framework is providing API to handle asynchronous data loading in activity or fragment. The Bonnie lib uses them to provide simple way of caching (preserving) instances of objects that mustn't be destroyed during orientation changes. Instances being preserved are destroyed when the activity holding them is  abandoned and no longer used. 
 
+
 ### Motto
 _Last night as I lay on my pillow_<br>
 _Last night as I lay on my bed_<br>
