@@ -1,4 +1,4 @@
-# Bonnie
+# Preservely
 _Android library allowing to preserve instance of any object accross orientation changes._
 
 ### Specs
@@ -10,10 +10,10 @@ _Android library allowing to preserve instance of any object accross orientation
 `// TODO`
 
 ### Sample scenario
-The aim of Bonnie lib creation was to provide simple and robust cache for presenters instances in MVP architecture. In MVP approach often there is a need to keep presenter instance from being destroyed during orientation change of activty. 
+The aim of Preservely lib creation was to provide simple and robust cache for presenters instances in MVP architecture. In MVP approach often there is a need to keep presenter instance from being destroyed during orientation change of activty. 
 
 ### The magic
-Bonnie uses Android Loader API under the hood. On Android platform Loaders framework is providing API to handle asynchronous data loading in activity or fragment. However, Loaders has special property of preserving instance of the object when it's reloaded. The Bonnie lib uses them to provide simple way of caching (preserving) instances of objects that mustn't be destroyed during orientation changes. Instances being preserved are destroyed when the activity holding them is  abandoned and no longer used.
+Preservely uses Android Loader API under the hood. On Android platform Loaders framework is providing API to handle asynchronous data loading in activity or fragment. However, Loaders has special property of preserving instance of the object when it's reloaded. Preservely benefits from that to provide simple way of caching (preserving) instances of objects that mustn't be destroyed during orientation changes. Instances being preserved are destroyed when the activity holding them is  abandoned and no longer used.
 
 ## License
     Copyright Samuel Urbanowicz   
@@ -29,14 +29,4 @@ Bonnie uses Android Loader API under the hood. On Android platform Loaders frame
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-### Etymology
-  _Last night as I lay on my pillow_<br>
-  _Last night as I lay on my bed_<br>
-  _Last night as I lay on my pillow_<br>
-  _I dreamt that my Bonnie was dead_<br>
-  _Oh, blow the winds o'er the ocean_<br>
-  _And blow the winds o'er the sea_<br>
-  _Oh, blow the winds o'er the ocean_<br>
-  _And bring back my Bonnie to me!_<br>
 
