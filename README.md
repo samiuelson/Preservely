@@ -1,5 +1,5 @@
 # Preservely
-_Android library allowing to preserve instance of any object accross orientation changes._
+_Android library allowing to preserve instance of any object across orientation changes._
 
 ### Specs
 * Lightweight < 20kB
