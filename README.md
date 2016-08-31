@@ -7,20 +7,21 @@ _Android library allowing to preserve instance of any object accross orientation
 * Java 8 ready
 
 ### Usage
-1.  Add the JitPack repository to your build file
+* Add the JitPack repository to your build file:
 ```
-allprojects {
-	repositories {
-		...
-		maven { url "https://jitpack.io" }
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
 	}
-}
 ```
-2.  Add the dependency
+
+* Add the dependency
 ```
-dependencies {
-        compile 'com.github.samiuelson:Preservely:v.0.0.1'
-}
+	dependencies {
+	        compile 'com.github.samiuelson:Preservely:v.0.0.1'
+	}
 ```
 
 ### Sample scenario
