@@ -7,7 +7,7 @@ _Android library allowing to preserve instance of any object across orientation 
 * Lightweight < 20kB
 * Clear & Flexible API (Using composition instead of forcing inheritance)
 * Java 8 ready
-```
+```java
 Preserver.init(this, 23,
                 (PreservedInstanceFactory<MyTypeToBePreserved>) () -> new MyTypeToBePreserved(),
                 (Preserver.OnInstanceReloadedAction<MyTypeToBePreserved>) instance -> {
@@ -20,7 +20,7 @@ Preserver.init(this, 23,
 ```
 ### Usage
 * Add the JitPack repository to your build file:
-```
+```gradle
 	allprojects {
 		repositories {
 			...
@@ -30,13 +30,13 @@ Preserver.init(this, 23,
 ```
 
 * Add the dependency
-```
+```gradle
 	dependencies {
 	        compile 'com.github.samiuelson:Preservely:v.0.0.1'
 	}
 ```
 * In your Activity / Fragment onCreate call 
-```
+```java
 Preserver.init(
 		this, // activity instance
 		23, // id of loader used
