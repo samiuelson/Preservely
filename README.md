@@ -5,7 +5,17 @@ _Android library allowing to preserve instance of any object accross orientation
 * Lightweight < 20kB
 * Clear & Flexible API (Using composition instead of forcing inheritance)
 * Java 8 ready
-
+```
+Preserver.init(this, 23,
+                (PreservedInstanceFactory<MyTypeToBePreserved>) () -> new MyTypeToBePreserved(),
+                (Preserver.OnInstanceReloadedAction<MyTypeToBePreserved>) instance -> {
+                    // do sth when instance is reloaded
+                },
+                (Preserver.OnInstanceDestroyedAction) () -> {
+                    // do sth when instance is destroyed
+                }
+);
+```
 ### Usage
 * Add the JitPack repository to your build file:
 ```
@@ -25,15 +35,28 @@ _Android library allowing to preserve instance of any object accross orientation
 ```
 * In your Activity / Fragment onCreate call 
 ```
-Preserver.init(this, 23,
-                (PreservedInstanceFactory<MyTypeToBePreserved>) () -> new MyTypeToBePreserved(),
-                (Preserver.OnInstanceReloadedAction<MyTypeToBePreserved>) instance -> {
-                    // do sth when instance is reloaded
+        Preserver.init(
+        	this, // activity instance
+        	23, // id of loader
+                new PreservedInstanceFactory<MyTypeToBePreserved>() {
+                    @Override
+                    public MyTypeToBePreserved create() {
+                        return new MyTypeToBePreserved();
+                    }
                 },
-                (Preserver.OnInstanceDestroyedAction) () -> {
-                    // do sth when instance is destroyed
+                new Preserver.OnInstanceReloadedAction<MyTypeToBePreserved>() {
+                    @Override
+                    public void performAction(MyTypeToBePreserved instance) {
+                        // do sth when instance is reloaded
+                    }
+                },
+                new Preserver.OnInstanceDestroyedAction() {
+                    @Override
+                    public void performAction() {
+                        // do sth when instance is destroyed
+                    }
                 }
-);
+        );
 ```
 ### Sample scenario
 The aim of Preservely lib creation was to provide simple and robust cache for presenters instances in MVP architecture. In MVP approach often there is a need to keep presenter instance from being destroyed during orientation change of activty. 
