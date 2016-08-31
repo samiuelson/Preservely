@@ -23,7 +23,7 @@ Preserver.init(this, 23,
 ```gradle
 	allprojects {
 		repositories {
-			...
+			// ...
 			maven { url "https://jitpack.io" }
 		}
 	}
