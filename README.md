@@ -23,7 +23,18 @@ _Android library allowing to preserve instance of any object accross orientation
 	        compile 'com.github.samiuelson:Preservely:v.0.0.1'
 	}
 ```
-
+* In your Activity / Fragment onCreate call 
+```
+Preserver.init(this, 23,
+                (PreservedInstanceFactory<MyTypeToBePreserved>) () -> new MyTypeToBePreserved(),
+                (Preserver.OnInstanceReloadedAction<MyTypeToBePreserved>) instance -> {
+                    // do sth when instance is reloaded
+                },
+                (Preserver.OnInstanceDestroyedAction) () -> {
+                    // do sth when instance is destroyed
+                }
+);
+```
 ### Sample scenario
 The aim of Preservely lib creation was to provide simple and robust cache for presenters instances in MVP architecture. In MVP approach often there is a need to keep presenter instance from being destroyed during orientation change of activty. 
 
