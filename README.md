@@ -60,7 +60,7 @@ Preserver.init(
 		}
 );
 ```
-### Sample scenario
+### Purpose
 The aim of Preservely lib creation was to provide simple and robust cache for presenters instances in MVP architecture. In MVP approach often there is a need to keep presenter instance from being destroyed during orientation change of activity. 
 
 ### The magic
