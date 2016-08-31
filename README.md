@@ -6,7 +6,7 @@ _Android library allowing to preserve instance of any object across orientation 
 ### Specs
 * Lightweight < 20kB
 * Clear & Flexible API (Using composition instead of forcing inheritance)
-* Java 8 ready
+* Java 8 ready...
 ```java
 Preserver.init(this, 23,
                 (PreservedInstanceFactory<MyTypeToBePreserved>) () -> new MyTypeToBePreserved(),
