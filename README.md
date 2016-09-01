@@ -61,7 +61,7 @@ Preserver.init(
 );
 ```
 ### Purpose
-The aim of Preservely lib creation is to provide simple and robust cache for presenters' instances in MVP architecture. In MVP approach, there often is a need to keep presenter instance from being destroyed during activity orientation change. 
+The aim of Preservely lib creation is to provide simple and robust cache for presenters' instances in MVP architecture. In MVP approach, there often is a need to keep presenter instance from being destroyed during activity orientation change. You can check out the sample project to see how it's working in action.
 
 ### The magic
 Preservely uses Android Loader API under the hood. On Android platform, Loaders framework provides API for asynchronous data loading in Activity or Fragment. However, Loaders has special property of preserving instance of the handled object when it's reloaded. Preservely benefits from that to provide simple way of caching (preserving) instances of objects that mustn't be destroyed during orientation changes. Preserved instances are destroyed when the activity holding them is  abandoned and no longer used.
