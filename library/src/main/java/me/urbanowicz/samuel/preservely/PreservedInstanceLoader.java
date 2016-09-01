@@ -35,5 +35,6 @@ public class PreservedInstanceLoader<I> extends Loader<I> {
     @Override
     protected void onForceLoad() {
         this.preservedInstance = factory.create();
+        deliverResult(this.preservedInstance);
     }
 }
