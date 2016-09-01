@@ -4,7 +4,7 @@ _Android library allowing to preserve instance of any object across orientation 
 [![](https://jitpack.io/v/samiuelson/Preservely.svg)](https://jitpack.io/#samiuelson/Preservely)
 
 ### Specs
-* Lightweight < 20kB
+* Lightweight ~5kB .jar
 * Clear & Flexible API (Using composition instead of forcing inheritance)
 * Java 8 ready...
 ```java
