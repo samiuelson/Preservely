@@ -4,7 +4,7 @@ _Android library allowing to preserve instance of any object across orientation 
 [![](https://jitpack.io/v/samiuelson/Preservely.svg)](https://jitpack.io/#samiuelson/Preservely)
 
 ### Specs
-* Lightweight ~5kB .jar
+* Lightweight 5kB .jar
 * Clear & Flexible API (Using composition instead of forcing inheritance)
 * Java 8 ready...
 ```java
@@ -32,7 +32,7 @@ Preserver.init(this, 23,
 * Add the dependency
 ```gradle
 	dependencies {
-	        compile 'com.github.samiuelson:Preservely:v.0.0.1'
+	        compile 'com.github.samiuelson:Preservely:0.0.1'
 	}
 ```
 * In your Activity / Fragment onCreate call 
