@@ -2,6 +2,8 @@
 _Android library allowing to preserve instance of any object across orientation changes._
 
 [![](https://jitpack.io/v/samiuelson/Preservely.svg)](https://jitpack.io/#samiuelson/Preservely)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Preservely-green.svg?style=true)](https://android-arsenal.com/details/1/4311)
+
 
 ### Specs
 * Lightweight (5kB jar)
