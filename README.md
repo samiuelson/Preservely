@@ -34,7 +34,7 @@ Preserver.init(this, 23,
 * Add the dependency
 ```gradle
 	dependencies {
-	        compile 'com.github.samiuelson:Preservely:0.0.2'
+	        compile 'com.github.samiuelson:Preservely:0.0.3'
 	}
 ```
 * In your Activity / Fragment onCreate call 
