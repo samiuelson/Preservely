@@ -1,7 +1,7 @@
 package me.urbanowicz.samuel.preservely;
 
 import android.content.Context;
-import android.support.v4.content.Loader;
+import android.content.Loader;
 
 public class PreservedInstanceLoader<I> extends Loader<I> {
 

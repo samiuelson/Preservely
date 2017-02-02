@@ -1,9 +1,9 @@
 package me.urbanowicz.samuel.preservely;
 
+import android.app.Activity;
+import android.app.LoaderManager;
+import android.content.Loader;
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.support.v7.app.AppCompatActivity;
 
 /**
  * Preserver class provides ready to use API for preserving instance of some object
@@ -37,13 +37,13 @@ public class Preserver {
      * @param <I> Type of the object being preserved
      */
     public static <I> void init(
-            final AppCompatActivity activity,
+            final Activity activity,
             final int loaderId,
             final PreservedInstanceFactory<I> factory,
             final OnInstanceReloadedAction<I> onInstanceReloaded,
             final OnInstanceDestroyedAction onInstanceDestroyed) {
 
-        activity.getSupportLoaderManager()
+        activity.getLoaderManager()
                 .initLoader(
                         loaderId,
                         Bundle.EMPTY,
