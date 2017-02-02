@@ -1,8 +1,8 @@
 # Preservely
 _Android library allowing to preserve instance of any object across orientation changes._
 
-[![](https://jitpack.io/v/samiuelson/Preservely.svg)](https://jitpack.io/#samiuelson/Preservely)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Preservely-green.svg?style=true)](https://android-arsenal.com/details/1/4311)
+[![](https://jitpack.io/v/samiuelson/Preservely.svg?style=flat-square)](https://jitpack.io/#samiuelson/Preservely)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Preservely-green.svg?style=flat-square)](https://android-arsenal.com/details/1/4311)
 
 
 ### Specs
@@ -34,7 +34,7 @@ Preserver.init(this, 23,
 * Add the dependency
 ```gradle
 	dependencies {
-	        compile 'com.github.samiuelson:Preservely:0.0.2'
+	        compile 'com.github.samiuelson:Preservely:0.0.3'
 	}
 ```
 * In your Activity / Fragment onCreate call 
