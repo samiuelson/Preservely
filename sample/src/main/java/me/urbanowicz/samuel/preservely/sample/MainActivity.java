@@ -8,7 +8,7 @@ import android.widget.TextView;
 import me.urbanowicz.samuel.preservely.PreservedInstanceFactory;
 import me.urbanowicz.samuel.preservely.Preserver;
 
-public class MainActivity extends AppCompatActivity implements Contract.View{
+public class MainActivity extends AppCompatActivity implements Contract.View {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private TextView textView;
