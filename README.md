@@ -1,6 +1,8 @@
 # Preservely
 _Android library allowing to preserve instance of any object across orientation changes._
 
+Note that the library should be considered depreceated now because Google deprecated Loaders API in favour to using ViewModel class instead. You can read more here: https://developer.android.com/guide/components/loaders.
+
 [![](https://jitpack.io/v/samiuelson/Preservely.svg?style=flat-square)](https://jitpack.io/#samiuelson/Preservely)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Preservely-green.svg?style=flat-square)](https://android-arsenal.com/details/1/4311)
 
